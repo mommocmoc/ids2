@@ -32,7 +32,7 @@ function draw() {
 
   setGradient(30, interval*2, 540, 80, c1, c2, X_AXIS);
   setGradient(30, interval*3, 540, 80, c2, c1, X_AXIS);
-
+  createP('색을변경하려면아무키나누르세요')
   if (r > 256 || r < 0) {
     //r = random(255);
     //speed[0] = int(random(1,3));
