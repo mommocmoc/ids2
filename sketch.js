@@ -8,7 +8,7 @@ var c1, c2;
 var interval = 90;
 
 function setup() {
-  createCanvas(600, 600);
+  //createCanvas(600, 600);
   
   r = int(random(255));
   g = int(random(255));
