@@ -5,7 +5,7 @@ var Y_AXIS = 1;
 var X_AXIS = 2;
 var speed = [1, 1, 1];
 var c1, c2;
-var interval = 90;
+var interval;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -20,19 +20,24 @@ function setup() {
 }
 
 function draw() {
+  interval = windowHeight/4
   c1 = color(r, g, b);
   c2 = color(g, r, b);
   //background(r,g,b);
   r = r + speed[0];
   g = g + speed[1];
   b = b + speed[2];
+	setGradient(0, interval*0, windowWidth, windowHeight/4, c1, c2, Y_AXIS);
+  setGradient(0, interval*1, windowWidth, windowHeight/4-10, c2, c1, Y_AXIS);
+  setGradient(0, interval*2+10, windowWidth/2, windowHeight, c1, c2, X_AXIS);
+  setGradient(windowWidth/2, interval*2+10, windowWidth/2, windowHeight, c2, c1, X_AXIS);
+  
+  //setGradient(0, interval*0, 540, 80, c1, c2, Y_AXIS);
+  //setGradient(0, interval*1, 540, 80, c2, c1, Y_AXIS);
 
-  setGradient(0, interval*0, 540, 80, c1, c2, Y_AXIS);
-  setGradient(0, interval*1, 540, 80, c2, c1, Y_AXIS);
+  //setGradient(0, interval*2, 540, 80, c1, c2, X_AXIS);
+  //setGradient(0, interval*3, 540, 80, c2, c1, X_AXIS);
 
-  setGradient(0, interval*2, 540, 80, c1, c2, X_AXIS);
-  setGradient(0, interval*3, 540, 80, c2, c1, X_AXIS);
-  createP('색을변경하려면아무키나누르세요')
   if (r > 256 || r < 0) {
     //r = random(255);
     //speed[0] = int(random(1,3));
