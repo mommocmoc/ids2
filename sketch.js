@@ -5,7 +5,7 @@ var Y_AXIS = 1;
 var X_AXIS = 2;
 var speed = [1, 1, 1];
 var c1, c2;
-
+var interval = 90;
 
 function setup() {
   createCanvas(600, 600);
@@ -27,11 +27,11 @@ function draw() {
   g = g + speed[1];
   b = b + speed[2];
 
-  setGradient(30, 90, 540, 80, c1, c2, Y_AXIS);
-  setGradient(30, 180, 540, 80, c2, c1, Y_AXIS);
+  setGradient(30, interval*0, 540, 80, c1, c2, Y_AXIS);
+  setGradient(30, interval*1, 540, 80, c2, c1, Y_AXIS);
 
-  setGradient(30, 270, 540, 80, c1, c2, X_AXIS);
-  setGradient(30, 360, 540, 80, c2, c1, X_AXIS);
+  setGradient(30, interval*2, 540, 80, c1, c2, X_AXIS);
+  setGradient(30, interval*3, 540, 80, c2, c1, X_AXIS);
 
   if (r > 256 || r < 0) {
     //r = random(255);
