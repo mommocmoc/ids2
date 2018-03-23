@@ -27,11 +27,11 @@ function draw() {
   g = g + speed[1];
   b = b + speed[2];
 
-  setGradient(30, interval*0, 540, 80, c1, c2, Y_AXIS);
-  setGradient(30, interval*1, 540, 80, c2, c1, Y_AXIS);
+  setGradient(0, interval*0, 540, 80, c1, c2, Y_AXIS);
+  setGradient(0, interval*1, 540, 80, c2, c1, Y_AXIS);
 
-  setGradient(30, interval*2, 540, 80, c1, c2, X_AXIS);
-  setGradient(30, interval*3, 540, 80, c2, c1, X_AXIS);
+  setGradient(0, interval*2, 540, 80, c1, c2, X_AXIS);
+  setGradient(0, interval*3, 540, 80, c2, c1, X_AXIS);
   createP('색을변경하려면아무키나누르세요')
   if (r > 256 || r < 0) {
     //r = random(255);
