@@ -8,7 +8,7 @@ var c1, c2;
 var interval = 90;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   
   r = int(random(255));
   g = int(random(255));
@@ -83,4 +83,8 @@ function resetColor() {
 
 function keyPressed() {
   resetColor();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
